@@ -22,7 +22,7 @@
         </ol>
       </section>
 
-      <router-view></router-view>
+      <RouterView />
     </div>
     <!-- /.content-wrapper -->
 
@@ -32,17 +32,17 @@
 </template>
 
 <script>
-import faker from "faker";
+// import faker from "faker";
 import config from "../config";
-import DashFooter from "./layout/DashFooter";
-import DashHeader from "./layout/DashHeader";
-import Sidebar from "./layout/Sidebar";
-import "hideseek";
+// import DashFooter from "./layout/DashFooter";
+import DashHeader from "../layout/DashHeader.vue";
+import Sidebar from "../layout/Sidebar.vue";
+// import "hideseek";
 
 export default {
   name: "Dash",
   components: {
-    DashFooter,
+    // DashFooter,
     DashHeader,
     Sidebar,
   },
@@ -55,15 +55,15 @@ export default {
       },
     };
   },
-  computed: {
-    user() {
-      return {
-        displayName: faker.name.findName(),
-        avatar: faker.image.avatar(),
-        roles: [faker.name.jobTitle(), faker.name.jobTitle()],
-      };
-    },
-  },
+  // computed: {
+  //   user() {
+  //     return {
+  //       displayName: faker.name.findName(),
+  //       avatar: faker.image.avatar(),
+  //       roles: [faker.name.jobTitle(), faker.name.jobTitle()],
+  //     };
+  //   },
+  // },
 };
 </script>
 
